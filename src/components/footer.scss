@@ -1,0 +1,71 @@
+$dark: #191716;
+$red: #8B1E1D;
+$yellow: #F5CF36;
+$animation-delay: .5s;
+$anim-curve: cubic-bezier(1,0,.75,.75);
+footer {
+  background: $dark;
+  padding: 3em;
+  @media screen and (max-width: 800px) {
+    padding: 1.5em;
+  }
+  position: relative;
+  z-index: 1;
+  &:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../img/grain.png') center repeat;
+  }
+  opacity: .7;
+  a.home {
+    background-image: url('../img/tagwhite.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 2em;
+    width: 200px;
+    display: block;
+    position: absolute;
+    text-decoration: none;
+  }
+  p {
+    margin-left: 200px;
+    font-size: .8em;
+    line-height: 2em;
+    max-width: 800px;
+    @media screen and(max-width: 600px) {
+      font-size: 1rem;
+      margin-left: 0;
+      margin-top: 3.5rem;
+      clear: left;
+    }
+  }
+  .social {
+    margin-top: 1.5rem;
+    margin-left: 181px;
+    a {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      padding: 25px;
+      margin: 0 .25em -25px .25em;
+      &.fb { background: url('../img/icons/fb.png') center no-repeat; background-size: 50%; }
+      &.tw { background: url('../img/icons/tw.png') center no-repeat; background-size: 50%; }
+      &.ig { background: url('../img/icons/ig.png') center no-repeat; background-size: 50%; }
+      &.em { background: url('../img/icons/em.png') center no-repeat; background-size: 50%; }
+      &:before { display: none }
+      border: 1em 1em 1em 1em soild transparent;
+      transition: .15s all;
+      &:hover { transform: scale(1.2); }
+    }
+    @media screen and (max-width: 800px) { margin-top: 5px }
+    @media screen and (max-width: 600px) {
+      margin-top: 5px;
+      margin-left: -16px;
+    }
+  }
+}

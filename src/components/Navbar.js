@@ -3,38 +3,25 @@ import Link from 'gatsby-link'
 
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import './navbar.scss'
 
 const Navbar = () => (
-  <nav className="navbar is-transparent">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
-        </Link>
-      </div>
-      <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div>
-    </div>
+  <nav>
+    <input id="menuToggle" type="checkbox" />
+    <a class="home" href="#"></a>
+    <label for="menuToggle"></label>
+    <ul>
+      <li><a href="intentions/">Intentions</a></li>
+      <li><a href="governance/">Governance</a></li>
+      <li><a href="apply/">Apply</a></li>
+      <li><a href="members/">Members</a></li>
+      <li class="social">
+        <a class="fb" href="http://fb.com/AlphaLambdaMu" target="_blank"></a>
+        <a class="tw" href="http://twitter.com/AlphaLambdaMu" target="_blank"></a>
+        <a class="ig" href="http://instagram.com/AlphaLambdaMu" target="_blank"></a>
+        <a class="em" href="mailto:contact@alphalambdamu.org" target="_blank"></a>
+      </li>
+    </ul>
   </nav>
 )
 
