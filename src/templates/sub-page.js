@@ -1,6 +1,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-// import PageHeader from
+import PageHeader from '../components/PageHeader'
 
 export const SubPageTemplate = ({
     title,
@@ -8,6 +8,7 @@ export const SubPageTemplate = ({
     copy
 }) => (
         <main>
+            <PageHeader title={title} coverImage={coverImage}/>
             <section class="letter">
                 <div class="copy">
                     {copy}
