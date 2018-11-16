@@ -19,6 +19,17 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "subpage"
+    label: "Subpage"
+    folder: "src/pages/subpages"
+    create: "true"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sub-page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Cover Image", name: "coverImage", widget: "image"}
+      - {label: "Sections", name: "sections", widget: "list", fields: [{label: "Header", name: "header", widget: "string"}, {label: "Copy", name: "body", widget: "markdown"}]}
+
   - name: "pages"
     label: "Pages"
     files:
