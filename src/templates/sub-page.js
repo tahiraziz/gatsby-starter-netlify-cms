@@ -23,7 +23,7 @@ export const SubPageTemplate = ({
 // }
 
 const SubPage = ({ data }) => {
-    const { queryData } = data.markdownRemark
+    const { markdownRemark: queryData } = data
 
     return (
         <SubPageTemplate
