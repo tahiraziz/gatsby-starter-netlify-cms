@@ -7,15 +7,20 @@ export const SubPageTemplate = ({
     coverImage,
     sections
 }) => (
-        <PageHeader title={"title"} coverImage={"coverImage"}/>
         <main>
             <section class="letter">
                 <div class="copy">
                     {
-                        sections.map( section => (
-                                <h1>section.header</h1>
-                                <div>section.markdownRemark.html</div>
-                            )
+                        sections.map(section => (
+                            <div>
+                                <h1>
+                                    {section.header}
+                                </h1>
+                                <div>
+                                    {section.markdownRemark.html}
+                                </div>
+                            </div>
+                        )
                         )
                     }
                 </div>
